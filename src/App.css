@@ -1,38 +1,84 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-color: white;
   min-height: 100vh;
+  color: rgb(19, 170, 19);
+  width: 100%;
+}
+
+/**
+ * Images a now responsive
+ */
+ img {
+	max-width: 100%;
+	height: auto;
+}
+
+/**
+ * Limit the container in
+ * width for big screens
+ */
+.header-container {
+	max-width: 100%;
+	padding: 20px;
+	margin: 0 auto;
+}
+
+/**
+ * By using display: flex
+ * Logo and nav are in 2 cols
+ * align-items make them
+ * vertically centered
+ * justify-content distribute
+ * horizontal spaces around
+ * and flex-wrap break the
+ * things in two lines in
+ * small screens
+ */
+.main-header .header-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+/**
+ * The followings are to
+ * make things more
+ * clean and airy
+ * and contents centered
+ */
+.main-nav ul {
+	margin: 1em 0 .5em;
+	text-align: center;
+}
+.main-nav li {
+	display: inline;
+}
+.main-nav a {
+	display: inline-block;
+	padding: .5em 1.5em;
+}
+
+/**
+ * Space-around become
+ * Space-between to
+ * distribute space
+ * between the flex-items
+ */
+ @media (min-width: 960px) {
+	.main-header .container {
+		justify-content: space-between;
+	}
+}
+
+
+.section {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  height: 50vh;
+  width: 100%;
+  border: solid 2px white;
+  margin-bottom: 5vh;
 }
